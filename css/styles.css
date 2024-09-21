@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    font: 1em sans-serif;
+}
+
+header {
+    padding: 20px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.menu {
+    user-select: none;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 15px;
+    color: #007BFF;
+}
+
+.menu li a:active {
+    background-color: #cfcfcf;
+    border-radius: 5px;
+}
+
+.menu li a:hover {
+    background-color: #cfcfcf;
+    border-radius: 5px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+
+#sessao-inicial {
+    margin: 50px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.alimentacao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #f0f4f8;
+    margin-bottom: 20px;
+}
+
+.alimentacao img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.alimentacao p {
+    padding: 30px;
+}
+
+.imagem-flutuante {
+    float: left;
+    margin: 0 20px 20px 0;
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+#artigo {
+    text-align: left;
+}
+
+#artigo p {
+    text-align: justify;
+}
+
+.artigo {
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 20px;
+    user-select: none;
+    font-size: 2.5rem;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #007BFF;
+}
+
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-size: 1.2em;
+    color: #007BFF;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#resultado {
+    margin-top: 20px;
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+    color: #333;
+}
+
+@media (max-width: 860px) {
+    .artigo {
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (max-width: 778px) {
+    nav {
+        flex-direction: row;
+        user-select: none;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: right;
+        justify-content: end;
+        position: absolute;
+        top: 95px;
+        right: 0px;
+        background-color: #f0f0f0;
+        width: 55%;
+        user-select: none;
+        transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s;
+    }
+
+    .menu li {
+        margin: 15px 0;
+    }
+
+    .menu-icon {
+        user-select: none;
+        display: block;
+        color: black;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #sessao-inicial {
+        padding: 0 20px;
+    }
+
+    .alimentacao {
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .alimentacao img {
+        width: 50%;
+        height: auto;
+    }
+
+    #paragrapho-alimentacao-2 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
